@@ -1,0 +1,233 @@
+
+:root {
+    --text-color: #757575;
+    --header-color: #212121;
+    --logo-color: #000000;
+    --accent-color: #2196F3;
+    --bg-color: #FFFFFF;
+    --secondary-bg-color:#F5F4FA;
+    --additional-bg-color:#2F303A;
+    --secondary-contact-color: rgba(255, 255, 255, 0.6);
+    --separator-line-color: #ECECEC;
+    --box-shadow-color: rgba(0, 0, 0, 0.15);
+
+}
+
+/* Оформление основного текста */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;  
+  }
+
+/* Делаем flex-контейнерами всю шапку, меню навигации и все списки */
+.header, 
+.nav, 
+.list {
+    display: flex;
+}
+
+/* Позиционируем элементы в шапке и во всех списках */
+.header,
+.list {
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Задаём ширину контента и центрируем его */
+.header,
+.section,
+.team >.list
+ {
+    width: 1170px;
+    margin: auto;
+}
+
+/* Стилизируем ссылки */
+.link {
+    margin: 0 0 0 50px; 
+
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+/* Стилизируем списки */
+.list,
+.address {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+/* Стилизируем логотип */
+.logo {
+    color: var(--logo-color);
+
+    margin: 24px 0;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+}
+
+.sub-logo {
+    color: var(--accent-color);
+}
+
+/* Позиционируем список навигации */
+.nav-link {
+    margin-left: 44px;
+}
+
+/* Разделительная черта между шапкой и остальной страницей */
+.separate-line {
+    height: 0px;
+    border: 1px solid var(--separator-line-color);
+}
+
+/* Основной заголовок */
+.hero {
+    color: var(--bg-color);
+    background-color: var(--additional-bg-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slogan {
+    width: 696px;
+    margin: 0 auto;
+    padding-top: 200px;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Оформление и позиционирование кнопки */
+.btn {
+    color: var(--bg-color);
+    background: var(--accent-color);
+
+    margin: 30px auto 200px;
+    padding: 10px 32px;
+
+    border-width: 0;
+    border-radius: 4px; 
+    box-shadow: 0px 4px 4px var(--box-shadow-color);
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+}
+
+/* Скрываем логические заголовки */
+.unvisible {
+    display: none;
+}
+
+/* Оформление подзаголовков */
+.subtitle {
+    color: var(--header-color);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+/* Оформление заголовков разделов(секций) */
+.title {
+    color: var(--header-color);
+
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+/* Блок отдельного преимущества */
+.feature {
+    width: 270px;
+    margin: 94px 0;
+}
+
+/* Убираем лишние пустоты под изображениями в списках */
+.list img {
+    display: block;
+}
+
+/* Секция "Наша команда" */
+.team {
+    background-color: var(--secondary-bg-color);
+
+    margin: 94px auto;
+    padding: 94px 0;
+}
+
+/* Блок отдельного члена команды */
+.member {
+    background-color: var(--bg-color);
+
+    text-align: center;
+    line-height: 0;
+}
+
+/* Подвал */
+.footer {
+    background-color: var(--additional-bg-color);
+}
+
+/* Размер и позиционирование контента подвала */
+.footer-container {
+    width: 1170px;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* Инвертируем цвет логотипа в подвале */
+.footer .logo {
+    color: var(--bg-color);
+}
+
+/* Оформляем блок адреса */
+.address{
+    margin-top: 20px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+/* Стилизируем ссылку адреса */
+.address-link {
+    color: var(--bg-color);
+    text-decoration: none;
+    display: block;
+}
+
+/* Стилизируем ссылки контактов в подвале */
+.contact {
+    color: var(--secondary-contact-color);
+    text-decoration: none;
+    padding-top: 9px;
+    display: block
+}
+
+
