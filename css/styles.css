@@ -9,10 +9,13 @@
     --additional-bg-color:#2F303A;
     --secondary-contact-color: rgba(255, 255, 255, 0.6);
     --separator-line-color: #ECECEC;
+    --border-color: #EEEEEE;
     --box-shadow-color1: rgba(0, 0, 0, 0.15);
     --box-shadow-color2: rgba(0, 0, 0, 0.12);
     --box-shadow-color3: rgba(0, 0, 0, 0.14);
     --box-shadow-color4: rgba(0, 0, 0, 0.2);
+    --box-shadow-color5: rgba(0, 0, 0, 0.1);
+    --box-shadow-color6: rgba(0, 0, 0, 0.08);
 
 }
 
@@ -27,7 +30,7 @@ body {
     letter-spacing: 0.03em;  
   }
 
-/* Делаем flex-контейнерами всю шапку, меню навигации и все списки */
+/* Делаем flex-контейнерами шапку, отдельно меню навигации и все списки */
 .header, 
 .nav, 
 .list {
@@ -43,11 +46,14 @@ body {
 
 /* Задаём ширину контента и центрируем его */
 .header,
-.section,
-.team >.list
- {
+.team >.list {
     width: 1170px;
     margin: auto;
+}
+
+.section {
+    width: 1170px;
+    margin: 94px auto;
 }
 
 /* Стилизируем ссылки */
@@ -145,11 +151,11 @@ body {
     border-width: 0;
     border-radius: 4px; 
     box-shadow: 0px 4px 4px var(--box-shadow-color1);
+    font-family: Roboto, sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
-
     cursor: pointer;
 }
 
@@ -180,7 +186,6 @@ body {
 /* Блок отдельного преимущества */
 .feature {
     width: 270px;
-    margin: 94px auto;
 }
 
 /* Убираем лишние пустоты под изображениями в списках */
@@ -259,5 +264,75 @@ body {
     padding-top: 9px;
     display: block
 }
+
+/* Фильтр для примеров работ */
+.filter {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+
+/* Оформляем кнопки фильтра */
+.filter-btn {
+    background: var(--secondary-bg-color);
+    margin: 0 4px 30px;
+    padding: 6px 22px;
+    border-width: 0;
+    border-radius: 4px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+}
+
+/* Переопределяем цвет кнопок фильтра при наведении мыши и
+   фокуса с клавиатуры */
+.filter-btn:hover,
+.filter-btn:focus {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: 0px 3px 1px var(--box-shadow-color5),
+                0px 1px 2px var(--box-shadow-color6),
+                0px 2px 2px var(--box-shadow-color2);
+}
+
+/* Список примеров работ */
+.examples {
+    list-style: none;
+    margin-left: -30px;
+    margin-top: -30px;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* GПример работы */
+.work-example {
+    width: 370px;
+    margin-left: 30px;
+    margin-top: 30px;
+    border: 1px solid var(--border-color);;
+    box-sizing: border-box;
+}
+
+/* Имя работы */
+.work-name {
+    color: var(--header-color);
+    margin: 20px 24px 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+/* Тип работы */
+.work-kind {
+    margin: 4px 24px 20px;
+    font-size: 16px;
+    line-height: 1.88;
+}
+
 
 
