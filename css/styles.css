@@ -139,8 +139,7 @@ body {
 }
 
 /* Заголовки секций */
-.activites-title,
-.team-title {
+.section-title {
     color: var(--header-color);
     font-weight: 700;
     font-size: 36px;
@@ -210,9 +209,10 @@ body {
 
 
 /* Переопределяем цвет кнопок фильтра при наведении мыши и
-   фокуса с клавиатуры */
+   фокуса с клавиатуры а также "Активной" кнопки*/
 .portfolio-btn:hover,
-.portfolio-btn:focus {
+.portfolio-btn:focus,
+.portfolio-btn.current {
     background-color: var(--accent-color);
     color: var(--bg-color);
     box-shadow: 0px 3px 1px var(--box-shadow-color5),
